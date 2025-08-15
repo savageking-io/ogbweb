@@ -21,7 +21,7 @@ COPY --from=dev-builder /app/public ./public
 COPY --from=dev-builder /app/.env ./.env
 ENV NODE_ENV=development
 EXPOSE 3000
-CMD ["npm", "run"]
+CMD ["npm", "run", "dev"]
 
 FROM node:18-alpine AS prod
 WORKDIR /app
